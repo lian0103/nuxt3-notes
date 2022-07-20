@@ -3,6 +3,7 @@ const slug = useRoute().params.slug.toString().replace(/,/g, '/');
 const { data: blog } = await useAsyncData(slug, () => {
   return queryContent(slug).findOne();
 });
+
 const toc = computed(() => {
   if (!blog.value) return [];
   const items = blog.value?.excerpt?.children;
@@ -37,7 +38,7 @@ useHead({
         class="w-[300px] p-5 sticky top-[80px] border rounded-md bg-white hidden lg:block"
       >
         <h2 class="text-sm font-bold mb-4">Table Of Contents</h2>
-        <ul class="space-y-2">
+        <ul class="space-y-2 overflow-hidden">
           <li
             class="whitespace-nowrap"
             v-for="(t, k) in toc"
@@ -71,6 +72,10 @@ useHead({
 
 <style scoped>
 .blog-link {
+  @apply prose-a:text-gray-600 no-underline;
+}
+.prose :where(a):not(:where([class~='not-prose'] *)) {
+  text-decoration: none;
   @apply prose-a:text-gray-600 no-underline;
 }
 </style>
