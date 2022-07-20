@@ -57,7 +57,7 @@ useHead({
       </div>
       <ClientOnly>
         <ContentRenderer
-          class="prose lg:prose-base prose-sm prose-slate blog-link pr-7 max-w-none"
+          class="prose lg:prose-base prose-sm prose-slate blog-link pr-7"
           :value="blog"
         >
           <template #empty>
@@ -72,6 +72,5 @@ useHead({
 <style scoped>
 .blog-link {
   @apply prose-a:text-gray-600 no-underline;
-  /* @apply prose-a:text-primary before:prose-headings:content-['#'] before:prose-headings:mr-1 before:prose-headings:text-primary before:prose-h1:content-['']; */
 }
 </style>

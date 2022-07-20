@@ -23,7 +23,9 @@ const outLinks = [
 </script>
 
 <template>
-  <header class="flex items-center justify-between h-20 px-[5%] lg:px-[15%] nav-header">
+  <header
+    class="flex items-center justify-between h-20 px-[5%] lg:px-[15%] nav-header"
+  >
     <NuxtLink to="/" class="font-bold text-2xl lg:text-4xl">
       <span class="text-primary">N</span>otes
     </NuxtLink>
@@ -47,9 +49,13 @@ const outLinks = [
         :key="`outLink-${i}`"
         class="inline-block nav-link hover:text-primary group cursor-pointer"
       >
-        <a class="flex items-center md:space-x-2" target="_blank" :href="n.link">
+        <a
+          class="flex items-center md:space-x-2"
+          target="_blank"
+          :href="n.link"
+        >
           <Icon :icon="n.icon" class="w-4 h-4" />
-         <span class="font-medium text-sm md:text-base"> {{ n.name }}</span>
+          <span class="font-medium text-sm md:text-base"> {{ n.name }}</span>
         </a>
         <div
           class="h-0.5 w-4/5 bg-primary mt-1 -translate-y-full scale-0 group-hover:scale-100 group-hover:translate-y-full transition-all"
@@ -64,9 +70,10 @@ const outLinks = [
   @apply text-primary;
 }
 
-.nav-header{
+.nav-header {
   @apply fixed left-0 top-0 w-full;
   z-index: 9999;
   @apply bg-white;
+  max-width: 100vw;
 }
 </style>

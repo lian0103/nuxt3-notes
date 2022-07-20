@@ -20,5 +20,12 @@ useHead({
 <style>
 .content-wrapper {
   height: calc(100vh - 80px);
+  width: 100%;
+  @apply md:max-w-screen-xl mx-auto;
+}
+@media screen and (max-width: 650px) {
+  .content-wrapper {
+    @apply overflow-y-scroll;
+  }
 }
 </style>
