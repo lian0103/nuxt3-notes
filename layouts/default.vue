@@ -11,7 +11,7 @@ useHead({
 <template>
   <div class="dark:bg-[#0c0c0c] dark:text-white">
     <Nav />
-    <div>
+    <div class="content-wrapper">
       <slot />
     </div>
   </div>
@@ -19,7 +19,6 @@ useHead({
 
 <style>
 .content-wrapper {
-  max-height: calc(100vh - 80px);
-  @apply overflow-y-scroll;
+  height: calc(100vh - 80px);
 }
 </style>
