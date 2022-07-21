@@ -16,7 +16,7 @@ const dataComputed = computed(() => {
   <main>
     <section class="lg:px-[10%] px-0 top80 pb-[80px]">
       <Profile />
-      <div class="w-full px-6">
+      <div class="w-full md:w-4/5 px-6">
         <Timeline :data="dataComputed" />
       </div>
     </section>
