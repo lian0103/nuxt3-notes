@@ -1,0 +1,22 @@
+{
+    "body": [
+        {
+            "time": "2018-09 ~ 2019-03",
+            "title": "WEB/APP前端工程師培訓班",
+            "text": "從零基礎開始學習網站開發的知識，一個網站從功能規劃、設計、切版、RWD、到前後端功能串接，在懵懵懂懂之間就結訓了。<br>@中壢資策會 ",
+            "imgs": [
+                "https://i.imgur.com/Y7RINwJ.jpg"
+            ],
+            "links":[
+                {"title":"個人作品 好時光水果","url":"https://lian0103.github.io/personalWork2018/index.html"},
+                {"title":"團體作品 熊麻吉交友","url":"https://tibamef2e.com/demo-projects/cd105g1/home.php"}
+            ]
+        },
+        {
+            "time": "2019-03 ~ 2020-03",
+            "title": "雲鼎科技",
+            "text": "轉職找工作面試了快30間，最後順利到了雲鼎，剛開始三個月真的都充滿挑戰，我要抓緊機會跟資深的問問題，還要想盡一切辦法完成任務。<br>@台北南港",
+            "imgs": ["https://i.imgur.com/eHLzhyU.jpg"]
+        }
+    ]
+}

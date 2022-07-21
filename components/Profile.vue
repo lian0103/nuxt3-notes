@@ -11,7 +11,7 @@
         <!-- Image for mobile view-->
         <div
           class="mobilePic"
-          style="background-image: url('https://i.imgur.com/XQ9AXFV.jpg')"
+          style="background-image: url('https://i.imgur.com/Bmy2WrS.jpg')"
         ></div>
 
         <h2 class="text-3xl">JASON LIEN</h2>
