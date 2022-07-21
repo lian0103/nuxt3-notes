@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import { Icon } from '@iconify/vue';
+</script>
 
 <template>
   <div
@@ -14,17 +16,17 @@
           style="background-image: url('https://i.imgur.com/Bmy2WrS.jpg')"
         ></div>
 
-        <h2 class="text-3xl">JASON LIEN</h2>
+        <h2 class="text-3xl">Jason Lien</h2>
         <div class="titleUnderline"></div>
         <p class="profileBody w-4/5 md:w-full mx-auto">
-          <i class="fas fa-briefcase listIcon"></i>
+          <Icon class="w-4 mr-2" icon="ic:outline-work-outline" />
           web developer
         </p>
         <p class="profileBody text-gray-600 w-4/5 md:w-full mx-auto">
-          <i class="fas fa-map-marker listIcon"></i>
+          <Icon class="w-4 mr-2" icon="ci:location-outline" />
           Yingge District,New Teipei City,Taiwan
         </p>
-        <p class="py-8 text-sm">有養一隻貓 ...XD <br/> 主要在工作之餘的時間，學習新網頁知識。</p>
+        <p class="py-8 text-sm">前端打滾<br/> 工作之餘的時間，學習新網頁知識。</p>
 
         <h2 class="fontIkea text-xl">FrontEnd</h2>
         <div class="iconsBox">

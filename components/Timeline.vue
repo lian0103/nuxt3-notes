@@ -23,14 +23,14 @@ const { data } = defineProps({
           alt="pic"
         />
       </div>
-      <div class="w-full flex space-x-4 overflow-x-scroll md:overflow-hidden">
+      <div class="w-full flex space-x-4 overflow-x-scroll md:overflow-hidden py-2">
         <a
           v-for="(link, aIdx) in item.links"
           :href="link.url"
           :key="'link' + aIdx"
           class="text-primary-400"
           target="_blank"
-          >{{ link.title }}</a
+          >{{aIdx+1}}.{{ link.title }}</a
         >
       </div>
     </li>

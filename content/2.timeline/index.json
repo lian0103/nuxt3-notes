@@ -1,6 +1,55 @@
 {
     "body": [
         {
+            "time": "2021-12 ~ 2022-04",
+            "title": "NodeJS學習",
+            "text": "不誤前端正業的學習內容",
+            "imgs": [],
+            "links": [
+                {
+                    "title": "實作socket io 的簡易聊天功能",
+                    "url": "http://jason-node-chatroom.herokuapp.com/"
+                },
+                {
+                    "title": "Node API",
+                    "url": "https://github.com/lian0103/NodeAPI"
+                },
+                {
+                    "title":"nodeJS & line-bot message API",
+                    "url":"https://github.com/lian0103/line-bot-dopee"
+                }
+            ]
+        },
+        {
+            "time": "2021-12 ~ 2022-04",
+            "title": "Ｑuasar Apps",
+            "text": "測試Quasar(VueJS library)，來實現記帳的應用，使用包含Quasar的Tab、Dialog、Form、和Dialog等組件。 並搭配Google Firebase平台API，實作權限註冊、儲存即時資料和專案佈署。",
+            "imgs": [],
+            "links": [
+                {
+                    "title": "花費紀錄",
+                    "url": "https://account-app-f70c0.web.app/#/"
+                },
+                {
+                    "title": "健康回報",
+                    "url": "https://gt-prevent-record.firebaseapp.com/#/"
+                },
+                {
+                    "title": "預約服務系統",
+                    "url": "https://book-service.firebaseapp.com/#/"
+                }
+            ]
+        },
+        {
+            "time": "2021-03 ~ 2021-09",
+            "title": "弋揚科技",
+            "text": "一言難盡...。<br/>@新北中和",
+            "imgs": [
+                "https://i.imgur.com/MdGs9CN.jpg"
+            ],
+            "links": []
+        },
+        {
             "time": "2020-07 ~ 2020-08",
             "title": "形象網頁",
             "text": "在技術上使用React SPA，也使用jQuery達成SPA。",
@@ -19,9 +68,11 @@
         {
             "time": "2020-03 ~ 2021-03",
             "title": "緯創軟體",
-            "text": "參與多人協作的Plant9專案，過程中要像個海綿持續吸收觀念，在這裡學到拆分元件和共用邏輯和資料流的處理。技術上使用到React Function Component，也是第一次接觸了JSX的語法",
+            "text": "參與多人協作的Plant9專案，過程中要像個海綿持續吸收觀念，在這裡學到拆分UI元件和資料流的處理。技術上使用到React Function Component，也是第一次接觸了JSX的語法<br/>＠台北大安",
             "imgs": [
-                "https://i.imgur.com/Exg1sJS.png"
+                "https://i.imgur.com/zwHslOH.jpg",
+                "https://i.imgur.com/Exg1sJS.png",
+                "https://i.imgur.com/nGeD30O.jpg"
             ]
         },
         {
@@ -29,7 +80,9 @@
             "title": "雲鼎科技",
             "text": "轉職找工作面試了快30間，最後順利到了雲鼎，剛開始三個月真的都充滿挑戰，我要抓緊機會跟資深的問問題，還要想盡一切辦法完成任務。<br>@台北南港",
             "imgs": [
-                "https://i.imgur.com/eHLzhyU.jpg"
+                "https://i.imgur.com/eHLzhyU.jpg",
+                "https://i.imgur.com/w5Inu7z.jpg",
+                "https://i.imgur.com/LSJJdp4.jpg"
             ]
         },
         {
@@ -37,7 +90,9 @@
             "title": "WEB/APP前端工程師培訓班",
             "text": "從零基礎開始學習網站開發的知識，一個網站從功能規劃、設計、切版、RWD、到前後端功能串接，在懵懵懂懂之間就結訓了。<br>@中壢資策會 ",
             "imgs": [
-                "https://i.imgur.com/Y7RINwJ.jpg"
+                "https://i.imgur.com/Y7RINwJ.jpg",
+                "https://i.imgur.com/p6za41Q.jpg",
+                "https://i.imgur.com/nqy2bpu.jpg"
             ],
             "links": [
                 {
