@@ -23,6 +23,16 @@ const { data } = defineProps({
           alt="pic"
         />
       </div>
+      <div class="w-full flex space-x-4 overflow-x-scroll md:overflow-hidden">
+        <a
+          v-for="(link, aIdx) in item.links"
+          :href="link.url"
+          :key="'link' + aIdx"
+          class="text-primary-400"
+          target="_blank"
+          >{{ link.title }}</a
+        >
+      </div>
     </li>
   </ol>
 </template>
@@ -45,7 +55,7 @@ const { data } = defineProps({
       @apply mb-4 text-base font-normal text-gray-500 dark:text-gray-400;
     }
     .img {
-      @apply h-32;
+      @apply h-40;
     }
   }
 }
