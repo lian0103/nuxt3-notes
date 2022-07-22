@@ -1,42 +1,20 @@
 {
     "body": [
         {
-            "time": "2021-12 ~ 2022-04",
-            "title": "NodeJS學習",
-            "text": "不誤前端正業的學習內容",
-            "imgs": [],
+            "time": "2021-09 ~ now",
+            "title": "大樹醫藥",
+            "text": "Vue2階段，使用ElementUI開發。Vue3階段，負責UI元件庫的開發、測試、修改和佈署，對NPM package和Vite有更多的認識。<br/>@桃園",
+            "imgs": [
+                "https://i.imgur.com/du2lymv.png"
+            ],
             "links": [
                 {
-                    "title": "實作socket io 的簡易聊天功能",
-                    "url": "http://jason-node-chatroom.herokuapp.com/"
+                    "title": "VueElementUI",
+                    "url": "https://github.com/lian0103/VueElementUI"
                 },
                 {
-                    "title": "Node API",
-                    "url": "https://github.com/lian0103/NodeAPI"
-                },
-                {
-                    "title":"nodeJS & line-bot message API",
-                    "url":"https://github.com/lian0103/line-bot-dopee"
-                }
-            ]
-        },
-        {
-            "time": "2021-12 ~ 2022-04",
-            "title": "Ｑuasar Apps",
-            "text": "測試Quasar(VueJS library)，來實現記帳的應用，使用包含Quasar的Tab、Dialog、Form、和Dialog等組件。 並搭配Google Firebase平台API，實作權限註冊、儲存即時資料和專案佈署。",
-            "imgs": [],
-            "links": [
-                {
-                    "title": "花費紀錄",
-                    "url": "https://account-app-f70c0.web.app/#/"
-                },
-                {
-                    "title": "健康回報",
-                    "url": "https://gt-prevent-record.firebaseapp.com/#/"
-                },
-                {
-                    "title": "預約服務系統",
-                    "url": "https://book-service.firebaseapp.com/#/"
+                    "title": "Great Tree UI Beta",
+                    "url": "https://lian0103.github.io/vue-ui/#/"
                 }
             ]
         },
@@ -48,22 +26,6 @@
                 "https://i.imgur.com/MdGs9CN.jpg"
             ],
             "links": []
-        },
-        {
-            "time": "2020-07 ~ 2020-08",
-            "title": "形象網頁",
-            "text": "在技術上使用React SPA，也使用jQuery達成SPA。",
-            "imgs": [],
-            "links": [
-                {
-                    "title": "React SPA",
-                    "url": "https://lian0103.github.io/runtai"
-                },
-                {
-                    "title": "jQuery SPA",
-                    "url": "https://lian0103.github.io/gulpWeb/#mainPage"
-                }
-            ]
         },
         {
             "time": "2020-03 ~ 2021-03",
