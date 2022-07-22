@@ -59,3 +59,31 @@ useHead({
     </section>
   </main>
 </template>
+
+<style>
+@media screen and (min-width: 480px) {
+  /* width */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 100vh;
+    background: #edf2f7;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e0;
+    border-radius: 100vh;
+    border: 1px solid #edf2f7;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a0aec0;
+  }
+}
+</style>

@@ -1,4 +1,6 @@
 <script setup>
+import { Icon } from '@iconify/vue';
+
 const slug = useRoute().params.slug.toString().replace(/,/g, '/');
 const { data: blog } = await useAsyncData(slug, () => {
   return queryContent(slug).findOne();
@@ -23,21 +25,38 @@ const toc = computed(() => {
   return toc;
 });
 
+const scrollTop = ref(0);
+
+onMounted(() => {
+  window.addEventListener('scroll', () => {
+    scrollTop.value = window.scrollY;
+  });
+});
+
+const handleScrollTop = () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
 useHead({
   title: `${blog.value?.title || '404'}`,
 });
 </script>
 
 <template>
-  <main>
+  <main class="relative">
     <article
-      class="lg:pt-20 pt-10 relative flex items-start lg:space-x-10 px-[5%] lg:px-[10%]"
+      class="pt-10 md:pt-0 md:pb-20 relative flex items-start lg:space-x-10 px-[5%] lg:px-[10%]"
     >
       <div
         v-if="blog?.excerpt"
-        class="w-[300px] p-5 sticky top-[80px] border rounded-md bg-white hidden lg:block"
+        class="w-[300px] p-5 sticky md:top-[20px] border rounded-md bg-white hidden lg:block"
       >
-        <h2 class="text-sm font-bold mb-4">Table Of Contents</h2>
+        <h2
+          class="text-sm font-bold mb-4 cursor-pointer"
+          @click="handleScrollTop"
+        >
+          Top
+        </h2>
         <ul class="space-y-2 overflow-hidden">
           <li
             class="whitespace-nowrap"
@@ -67,6 +86,13 @@ useHead({
         </ContentRenderer>
       </ClientOnly>
     </article>
+    <span
+      v-show="scrollTop > 0"
+      @click="handleScrollTop"
+      class="text-2xl rounded-full fixed right-10 bottom-20 cursor-pointer"
+    >
+      <Icon icon="bx:arrow-to-top" />
+    </span>
   </main>
 </template>
 

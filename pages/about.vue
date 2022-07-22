@@ -14,9 +14,10 @@ const dataComputed = computed(() => {
 
 <template>
   <main>
-    <section class="lg:px-[10%] px-0 top80 pb-[10px] md:pb-[20px]">
+    <section class="lg:px-[10%] px-0 pb-[10px] md:pb-[20px]">
       <Profile />
-      <div class="w-full md:w-4/5 px-6">
+      <div class="w-full md:w-4/5 px-6 md:px-0">
+        <h2 class="timeline-title">Work history</h2>
         <Timeline :data="dataComputed" />
       </div>
     </section>
@@ -24,7 +25,7 @@ const dataComputed = computed(() => {
 </template>
 
 <style>
-.top80 {
-  padding-top: 80px;
+.timeline-title {
+  @apply py-4 text-lg font-bold flex items-center justify-center lg:justify-start;
 }
 </style>

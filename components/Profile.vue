@@ -5,7 +5,7 @@ import { Icon } from '@iconify/vue';
 <template>
   <div
     id="profileBox"
-    class="max-w-6xl flex items-center h-auto flex-wrap mx-auto pt-16 pb-10 md:py-16 lg:my-0"
+    class="max-w-6xl flex items-center h-auto flex-wrap mx-auto py-8 lg:my-0"
   >
     <!--Main Col-->
     <div id="profile" class="profile">

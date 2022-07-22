@@ -71,7 +71,7 @@ const outLinks = [
 }
 
 .nav-header {
-  @apply fixed left-0 top-0 w-full;
+  @apply fixed md:static left-0 top-0 w-full;
   z-index: 9999;
   @apply bg-white;
   max-width: 100vw;
