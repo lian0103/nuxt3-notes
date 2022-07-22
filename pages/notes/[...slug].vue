@@ -43,9 +43,9 @@ useHead({
 </script>
 
 <template>
-  <main class="relative">
+  <main class="relative overflow-y-hidden">
     <article
-      class="pt-10 md:pt-0 md:pb-20 relative flex items-start lg:space-x-10 px-[5%] lg:px-[10%]"
+      class="pt-12 md:pt-0 md:pb-20 relative flex items-start lg:space-x-10 px-[5%] lg:px-[10%]"
     >
       <div
         v-if="blog?.excerpt"
@@ -77,7 +77,7 @@ useHead({
       </div>
       <ClientOnly>
         <ContentRenderer
-          class="prose lg:prose-base prose-sm prose-slate blog-link pr-7"
+          class="prose lg:prose-base prose-sm prose-slate blog-link md:pr-7"
           :value="blog"
         >
           <template #empty>
@@ -103,5 +103,11 @@ useHead({
 .prose :where(a):not(:where([class~='not-prose'] *)) {
   text-decoration: none;
   @apply prose-a:text-gray-600 no-underline;
+}
+
+.prose-sm :where(pre):not(:where([class~=not-prose] *)){
+  max-width: 90vw;
+  margin: auto;
+  overflow-y: scroll;
 }
 </style>
