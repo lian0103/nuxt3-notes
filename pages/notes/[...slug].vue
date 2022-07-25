@@ -1,7 +1,7 @@
 <script setup>
 import { Icon } from '@iconify/vue';
 
-console.log(useRoute(useRoute().params))
+// console.log(useRoute(useRoute().params))
 const slug = useRoute().params.slug.toString().replace(/,/g, '/');
 const { data: blog } = await useAsyncData(slug, () => {
   return queryContent(slug).findOne();
