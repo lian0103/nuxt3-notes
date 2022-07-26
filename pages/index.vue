@@ -10,7 +10,7 @@ useHead({
 
 <template>
   <main>
-    <section class="lg:px-[10%] px-[5%] lg:pt-20 pt-14">
+    <section class="lg:px-[10%] px-[5%] lg:pt-20 pt-2">
       <h1
         class="lg:text-6xl text-4xl text-center leading-normal font-bold rainbow-text my-12"
       >

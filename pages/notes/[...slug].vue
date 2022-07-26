@@ -44,13 +44,13 @@ useHead({
 </script>
 
 <template>
-  <main class="relative overflow-y-hidden">
+  <main class="relative">
     <article
-      class="pt-12 md:pt-0 md:pb-20 relative flex items-start lg:space-x-10 px-[5%] lg:px-[10%]"
+      class="pt-0 md:pb-20 relative flex items-start lg:space-x-10 px-[5%] lg:px-[10%]"
     >
       <div
         v-if="blog?.excerpt"
-        class="w-[300px] p-5 sticky md:top-[20px] border rounded-md bg-white hidden lg:block"
+        class="w-[300px] p-5 sticky md:top-[90px] border rounded-md bg-white hidden lg:block"
       >
         <h2
           class="text-sm font-bold mb-4 cursor-pointer"

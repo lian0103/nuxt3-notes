@@ -19,9 +19,8 @@ useHead({
 
 <style>
 .content-wrapper {
-  height: calc(100vh - 80px);
   width: 100%;
-  @apply md:max-w-screen-xl mx-auto;
+  @apply md:max-w-screen-xl mx-auto pb-12 md:pb-0;
 }
 @media screen and (max-width: 650px) {
   .content-wrapper {
