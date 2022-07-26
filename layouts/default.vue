@@ -9,7 +9,7 @@ useHead({
 </script>
 
 <template>
-  <div class="dark:bg-[#0c0c0c] dark:text-white">
+  <div>
     <Nav />
     <div class="content-wrapper">
       <slot />

@@ -13,7 +13,7 @@ const toc = computed(() => {
   if (!items) return [];
   const toc = [];
   const tags = ['h2', 'h3', 'h4', 'h5', 'h6'];
-  // console.log(blog.value)
+  // console.log(blog.value);
   items.forEach((item) => {
     if (tags.includes(item.tag)) {
       toc.push({
@@ -76,16 +76,10 @@ useHead({
           </li>
         </ul>
       </div>
-      <ClientOnly>
-        <ContentRenderer
-          class="prose lg:prose-base prose-sm prose-slate blog-link md:pr-7"
-          :value="blog"
-        >
-          <template #empty>
-            <p>No content found.</p>
-          </template>
-        </ContentRenderer>
-      </ClientOnly>
+      <MarkdownRenderer
+        class="prose lg:prose-base prose-sm prose-slate blog-link md:pr-7"
+        :value="blog"
+      />
     </article>
     <span
       v-show="scrollTop > 0"
@@ -97,16 +91,26 @@ useHead({
   </main>
 </template>
 
-<style scoped>
+<style>
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: #6d28d9 !important;
+  font-weight: bold !important;
+}
+
 .blog-link {
-  @apply prose-a:text-gray-600 no-underline;
+  @apply prose-a:text-blue-600 no-underline;
 }
 .prose :where(a):not(:where([class~='not-prose'] *)) {
   text-decoration: none;
   @apply prose-a:text-gray-600 no-underline;
 }
 
-.prose-sm :where(pre):not(:where([class~=not-prose] *)){
+.prose-sm :where(pre):not(:where([class~='not-prose'] *)) {
   max-width: 90vw;
   margin: auto;
   overflow-y: scroll;
