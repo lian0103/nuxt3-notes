@@ -1,32 +1,27 @@
 <script setup>
 import { Icon } from '@iconify/vue';
 
-// console.log(useRoute(useRoute().params))
-const slug = useRoute().params.slug.toString().replace(/,/g, '/');
-const { data: blog } = await useAsyncData(slug, () => {
-  return queryContent(slug).findOne();
-});
-
-const toc = computed(() => {
-  if (!blog.value) return [];
-  const items = blog.value?.excerpt?.children;
-  if (!items) return [];
-  const toc = [];
-  const tags = ['h2', 'h3', 'h4', 'h5', 'h6'];
-  // console.log(blog.value);
-  items.forEach((item) => {
-    if (tags.includes(item.tag)) {
-      toc.push({
-        id: item.props.id,
-        title: item.props.id.toString().replace(/-/g, ' '),
-        depth: Number(item.tag.replace(/h/g, '')),
-      });
-    }
-  });
-  return toc;
-});
-
 const scrollTop = ref(0);
+const contentPath = useRoute().params.slug.toString().replace(/,/g, '/');
+const folderPath = '/' + contentPath.split('/')[0] + '/' + contentPath.split('/')[1];
+
+// console.log('contentPath', contentPath);
+// console.log('folderPath', folderPath);
+
+const { data: blog = null } = await useAsyncData('content-' + contentPath, () => {
+  return queryContent(contentPath).findOne();
+});
+
+const { data: prevNextData = null } = await useAsyncData(
+  'content-around-' + contentPath,
+  () => {
+    return queryContent(folderPath)
+      .only(['_id', '_path', 'title'])
+      .findSurround({
+        _path: '/' + contentPath,
+      });
+  }
+);
 
 onMounted(() => {
   window.addEventListener('scroll', () => {
@@ -39,17 +34,17 @@ const handleScrollTop = () => {
 };
 
 useHead({
-  title: `${blog.value?.title || '404'}`,
+  title: `${blog?.value?.title || '404'}`,
 });
 </script>
 
 <template>
   <main class="relative">
     <article
-      class="pt-0 md:pb-20 relative flex items-start lg:space-x-10 px-[5%] lg:px-[10%]"
+      v-if="blog?.excerpt"
+      class="pt-0 md:pb-28 relative flex items-start lg:space-x-10 px-[5%] lg:px-[10%]"
     >
       <div
-        v-if="blog?.excerpt"
         class="w-[300px] p-5 sticky md:top-[90px] border rounded-md bg-white hidden lg:block"
       >
         <Toc :links="blog.body.toc.links" />
@@ -63,6 +58,12 @@ useHead({
           <p>No content found.</p>
         </template>
       </ContentRenderer>
+      <PrevNext
+        v-if="prevNextData"
+        class="w-full absolute bottom-8 left-0"
+        :prev="prevNextData[0]"
+        :next="prevNextData[1]"
+      />
     </article>
     <span
       v-show="scrollTop > 0"

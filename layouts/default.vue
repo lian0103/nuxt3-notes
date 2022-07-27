@@ -1,10 +1,6 @@
 <script setup>
-const { data: blogNav } = await useAsyncData('navigation', () => {
-  return fetchContentNavigation(queryContent('blog'));
-});
-
 useHead({
-  title: 'Content Blog',
+  title: 'Content Notes',
 });
 </script>
 
