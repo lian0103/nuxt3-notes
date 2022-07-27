@@ -48,9 +48,9 @@ useHead({
       v-if="blog?.excerpt"
       class="pt-0 md:pb-28 relative flex items-start lg:space-x-10 px-[5%] lg:px-[10%]"
     >
-      <div class="sticky md:top-[90px]">
+      <div class="sticky md:top-[90px] hidden lg:block">
         <h2 class="font-bold text-base py-3">筆記內容</h2>
-        <div class="w-[300px] p-5 border rounded-md bg-white hidden lg:block">
+        <div class="w-[300px] p-5 border rounded-md bg-white">
           <Toc :links="blog.body.toc.links" />
         </div>
 
