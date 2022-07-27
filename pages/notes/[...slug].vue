@@ -3,14 +3,18 @@ import { Icon } from '@iconify/vue';
 
 const scrollTop = ref(0);
 const contentPath = useRoute().params.slug.toString().replace(/,/g, '/');
-const folderPath = '/' + contentPath.split('/')[0] + '/' + contentPath.split('/')[1];
+const folderPath =
+  '/' + contentPath.split('/')[0] + '/' + contentPath.split('/')[1];
 
 // console.log('contentPath', contentPath);
 // console.log('folderPath', folderPath);
 
-const { data: blog = null } = await useAsyncData('content-' + contentPath, () => {
-  return queryContent(contentPath).findOne();
-});
+const { data: blog = null } = await useAsyncData(
+  'content-' + contentPath,
+  () => {
+    return queryContent(contentPath).findOne();
+  }
+);
 
 const { data: prevNextData = null } = await useAsyncData(
   'content-around-' + contentPath,
@@ -44,10 +48,18 @@ useHead({
       v-if="blog?.excerpt"
       class="pt-0 md:pb-28 relative flex items-start lg:space-x-10 px-[5%] lg:px-[10%]"
     >
-      <div
-        class="w-[300px] p-5 sticky md:top-[90px] border rounded-md bg-white hidden lg:block"
-      >
-        <Toc :links="blog.body.toc.links" />
+      <div class="sticky md:top-[90px]">
+        <h2 class="font-bold text-base py-3">筆記內容</h2>
+        <div class="w-[300px] p-5 border rounded-md bg-white hidden lg:block">
+          <Toc :links="blog.body.toc.links" />
+        </div>
+
+        <PrevNext
+          v-if="prevNextData"
+          class="w-full mt-8"
+          :prev="prevNextData[0]"
+          :next="prevNextData[1]"
+        />
       </div>
 
       <ContentRenderer
@@ -58,12 +70,6 @@ useHead({
           <p>No content found.</p>
         </template>
       </ContentRenderer>
-      <PrevNext
-        v-if="prevNextData"
-        class="w-full absolute bottom-8 left-0"
-        :prev="prevNextData[0]"
-        :next="prevNextData[1]"
-      />
     </article>
     <span
       v-show="scrollTop > 0"
