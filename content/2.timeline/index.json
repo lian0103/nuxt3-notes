@@ -1,0 +1,71 @@
+{
+    "body": [
+        {
+            "time": "2021-09 ~ now",
+            "title": "大樹醫藥",
+            "text": "Vue2階段，使用ElementUI開發。Vue3階段，負責UI元件庫的開發、測試、修改和佈署，對NPM package和Vite有更多的認識。<br/>@桃園",
+            "imgs": [
+                "https://i.imgur.com/du2lymv.png"
+            ],
+            "links": [
+                {
+                    "title": "VueElementUI",
+                    "url": "https://github.com/lian0103/VueElementUI"
+                },
+                {
+                    "title": "Great Tree UI Beta",
+                    "url": "https://lian0103.github.io/vue-ui/#/"
+                }
+            ]
+        },
+        {
+            "time": "2021-03 ~ 2021-09",
+            "title": "弋揚科技",
+            "text": "一言難盡...。<br/>@新北中和",
+            "imgs": [
+                "https://i.imgur.com/MdGs9CN.jpg"
+            ],
+            "links": []
+        },
+        {
+            "time": "2020-03 ~ 2021-03",
+            "title": "緯創軟體",
+            "text": "參與多人協作的Plant9專案，過程中要像個海綿持續吸收觀念，在這裡學到拆分UI元件和資料流的處理。技術上使用到React Function Component，也是第一次接觸了JSX的語法<br/>＠台北大安",
+            "imgs": [
+                "https://i.imgur.com/zwHslOH.jpg",
+                "https://i.imgur.com/Exg1sJS.png",
+                "https://i.imgur.com/nGeD30O.jpg"
+            ]
+        },
+        {
+            "time": "2019-03 ~ 2020-03",
+            "title": "雲鼎科技",
+            "text": "轉職找工作面試了快30間，最後順利到了雲鼎，剛開始三個月真的都充滿挑戰，我要抓緊機會跟資深的問問題，還要想盡一切辦法完成任務。<br>@台北南港",
+            "imgs": [
+                "https://i.imgur.com/eHLzhyU.jpg",
+                "https://i.imgur.com/w5Inu7z.jpg",
+                "https://i.imgur.com/LSJJdp4.jpg"
+            ]
+        },
+        {
+            "time": "2018-09 ~ 2019-03",
+            "title": "WEB/APP前端工程師培訓班",
+            "text": "從零基礎開始學習網站開發的知識，一個網站從功能規劃、設計、切版、RWD、到前後端功能串接，在懵懵懂懂之間就結訓了。<br>@中壢資策會 ",
+            "imgs": [
+                "https://i.imgur.com/Y7RINwJ.jpg",
+                "https://i.imgur.com/p6za41Q.jpg",
+                "https://i.imgur.com/nqy2bpu.jpg"
+            ],
+            "links": [
+                {
+                    "title": "個人作品 好時光水果",
+                    "url": "https://lian0103.github.io/personalWork2018/index.html"
+                },
+                {
+                    "title": "團體作品 熊麻吉交友",
+                    "url": "https://tibamef2e.com/demo-projects/cd105g1/home.php"
+                }
+            ]
+        }
+    ]
+}
