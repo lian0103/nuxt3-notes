@@ -25,8 +25,9 @@ const outLinks = [
 <template>
   <header class="nav-header">
     <div class="wrapper">
-      <NuxtLink to="/" class="font-bold text-2xl lg:text-4xl">
+      <NuxtLink to="/" class="font-bold text-2xl lg:text-4xl relative">
         <span class="text-primary">N</span>otes
+        <div class="w-full text-center text-xs font-normal text-gray-400 md:py-1">Nuxt3 App</div>
       </NuxtLink>
       <nav class="flex items-center space-x-7 text-gray-600">
         <NuxtLink

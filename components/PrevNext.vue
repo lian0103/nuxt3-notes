@@ -4,21 +4,23 @@ defineProps(['prev', 'next']);
 </script>
 
 <template>
-  <h2 class="font-bold text-base py-3">相關筆記</h2>
-  <ul class="prev-next-cont">
-    <li class="link-item prev" :class="{ 'mb-2': next }">
-      <NuxtLink v-if="prev" :to="'/notes' + prev._path">
-        <Icon class="w-4 mr-2" icon="flat-color-icons:previous" />
-        <span> {{ prev.title }} </span>
-      </NuxtLink>
-    </li>
-    <li class="link-item next">
-      <NuxtLink v-if="next" :to="'/notes' + next._path">
-        <span> {{ next.title }} </span>
-        <Icon class="w-4 ml-2" icon="flat-color-icons:next" />
-      </NuxtLink>
-    </li>
-  </ul>
+  <div>
+    <h2 class="font-bold text-base py-3">相關筆記</h2>
+    <ul class="prev-next-cont">
+      <li class="link-item prev" :class="{ 'mb-2': next }">
+        <NuxtLink v-if="prev" :to="'/notes' + prev._path">
+          <Icon class="w-4 mr-2" icon="flat-color-icons:previous" />
+          <span> {{ prev.title }} </span>
+        </NuxtLink>
+      </li>
+      <li class="link-item next">
+        <NuxtLink v-if="next" :to="'/notes' + next._path">
+          <span> {{ next.title }} </span>
+          <Icon class="w-4 ml-2" icon="flat-color-icons:next" />
+        </NuxtLink>
+      </li>
+    </ul>
+  </div>
 </template>
 
 <style scoped>
