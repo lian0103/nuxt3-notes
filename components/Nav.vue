@@ -13,13 +13,43 @@ const links = [
   },
 ];
 
-const outLinks = [
-  {
-    name: 'GitHub',
-    icon: 'akar-icons:github-fill',
-    link: 'https://github.com/lian0103',
-  },
-];
+const modeIconMap = {
+  light: 'akar-icons:sun',
+  dark: 'akar-icons:moon-fill',
+  sepia: 'bi:cloud-moon',
+};
+
+const appMode = useState('appMode', () => 'light');
+
+const handleAppMode = () => {
+  switch (appMode.value) {
+    case 'light': {
+      appMode.value = 'dark';
+      break;
+    }
+    case 'dark': {
+      appMode.value = 'sepia';
+      break;
+    }
+    case 'sepia': {
+      appMode.value = 'light';
+      break;
+    }
+  }
+  setTimeout(() => {
+    addModeClass(appMode.value);
+  }, 100);
+};
+
+const addModeClass = (mode = null) => {
+  document
+    ?.getElementsByTagName('html')[0]
+    ?.setAttribute('class', `${mode || appMode.value}-mode`);
+};
+
+onMounted(() => {
+  addModeClass();
+});
 </script>
 
 <template>
@@ -27,14 +57,18 @@ const outLinks = [
     <div class="wrapper">
       <NuxtLink to="/" class="font-bold text-2xl lg:text-4xl relative">
         <span class="text-primary">N</span>otes
-        <div class="w-full text-center text-xs font-normal text-gray-400 md:py-1">Nuxt3 App</div>
+        <div
+          class="w-full text-center text-xs font-normal text-gray-400 md:py-1"
+        >
+          Nuxt3 App
+        </div>
       </NuxtLink>
       <nav class="flex items-center space-x-7 text-gray-600">
         <NuxtLink
           v-for="(n, i) in links"
           :key="`navLink-${i}`"
           :to="n.link"
-          class="inline-block nav-link hover:text-primary group"
+          class="flex items-center nav-link hover:text-primary group"
         >
           <div class="flex items-center md:space-x-2">
             <Icon :icon="n.icon" class="w-4 h-4" />
@@ -44,22 +78,8 @@ const outLinks = [
             class="h-0.5 w-4/5 bg-primary mt-1 -translate-y-full scale-0 group-hover:scale-100 group-hover:translate-y-full transition-all"
           ></div>
         </NuxtLink>
-        <div
-          v-for="(n, i) in outLinks"
-          :key="`outLink-${i}`"
-          class="inline-block nav-link hover:text-primary group cursor-pointer"
-        >
-          <a
-            class="flex items-center md:space-x-2"
-            target="_blank"
-            :href="n.link"
-          >
-            <Icon :icon="n.icon" class="w-4 h-4" />
-            <span class="font-medium text-sm md:text-base"> {{ n.name }}</span>
-          </a>
-          <div
-            class="h-0.5 w-4/5 bg-primary mt-1 -translate-y-full scale-0 group-hover:scale-100 group-hover:translate-y-full transition-all"
-          ></div>
+        <div class="cursor-pointer hover:text-primary" @click="handleAppMode">
+          <Icon class="w-5 h-5" :icon="modeIconMap[appMode]" />
         </div>
       </nav>
     </div>

@@ -144,7 +144,8 @@ import { Icon } from '@iconify/vue';
 
 <style scoped>
 .profile {
-  @apply w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl bg-white opacity-75 mx-6 lg:mx-0;
+  @apply w-full lg:w-3/5 rounded-lg lg:rounded-l-lg lg:rounded-r-none shadow-2xl opacity-75 mx-6 lg:mx-0;
+  
   .profileInner {
     @apply p-4 md:p-8 text-center lg:text-left;
     .mobilePic {

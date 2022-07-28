@@ -50,7 +50,7 @@ useHead({
     >
       <div class="sticky md:top-[90px] hidden lg:block">
         <h2 class="font-bold text-base py-3">筆記內容</h2>
-        <div class="w-[300px] p-5 border rounded-md bg-white">
+        <div class="w-[300px] p-5 border rounded-md">
           <Toc :links="blog.body.toc.links" />
         </div>
 
@@ -97,12 +97,16 @@ h6 a {
 }
 .prose :where(a):not(:where([class~='not-prose'] *)) {
   text-decoration: none;
-  @apply prose-a:text-gray-600 no-underline;
+  @apply no-underline;
 }
 
 .prose-sm :where(pre):not(:where([class~='not-prose'] *)) {
   max-width: 90vw;
   margin: auto;
   overflow-y: scroll;
+}
+
+.prose :where(blockquote):not(:where([class~="not-prose"] *)){
+  color: var(--mode-text-color);
 }
 </style>
