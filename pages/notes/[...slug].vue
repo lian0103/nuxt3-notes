@@ -98,6 +98,10 @@ h6 a {
 .blog-link {
   @apply prose-a:text-blue-600 no-underline;
 }
+.prose {
+  color: var(--mode-text-color);
+}
+
 .prose :where(a):not(:where([class~='not-prose'] *)) {
   text-decoration: none;
   @apply no-underline;
