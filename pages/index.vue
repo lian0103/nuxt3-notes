@@ -24,7 +24,7 @@ useHead({
       </p>
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
         <div
-          class="px-7 py-5 rounded-lg border-2"
+          class="px-7 py-5 rounded-lg border-2 listBox"
           v-for="(b, i) in blogNav[0]?.children"
           :key="`blogNavItem-${b._path}-${i}`"
         >
@@ -39,18 +39,11 @@ useHead({
             <li
               v-for="(child, k) in b.children"
               :key="`childNav-${child._path}-${k}-${i}`"
-              class="list-item text-sm text-gray-600 hover:text-primary-900 underline underline-offset-4 decoration-primary/40 hover:decoration-primary transition-all"
+              class="listItem"
             >
               <NuxtLink :to="`/notes${child._path}`">
                 {{ child.title }}
               </NuxtLink>
-            </li>
-          </ul>
-          <ul v-else class="list-disc list-inside mt-4 pl-2 space-y-3">
-            <li
-              class="list-item text-sm text-gray-600 hover:text-primary-900 underline underline-offset-4 decoration-wavy decoration-primary/40 hover:decoration-primary transition-all"
-            >
-              <NuxtLink :to="`/notes${b._path}`"> Get Started </NuxtLink>
             </li>
           </ul>
         </div>
@@ -60,6 +53,18 @@ useHead({
 </template>
 
 <style>
+.listBox{
+  border-color: var(--border-color);
+}
+
+.listItem {
+  @apply list-item text-sm text-gray-600 underline underline-offset-4 decoration-transparent hover:decoration-primary/60 transition-all;
+  color: var(--mode-text-colo);
+}
+.listItem:hover {
+  color: var(--mode-text-colo);
+}
+
 @media screen and (min-width: 480px) {
   /* width */
   ::-webkit-scrollbar {

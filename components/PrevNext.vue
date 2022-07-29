@@ -25,7 +25,8 @@ defineProps(['prev', 'next']);
 
 <style scoped>
 .prev-next-cont {
-  @apply flex flex-col justify-between p-4 border border-slate-200 rounded-lg text-sm;
+  @apply flex flex-col justify-between p-4 border  rounded-lg text-sm;
+  border-color: var(--border-color);
 }
 .link-item a {
   @apply flex items-center gap-2 h-full;

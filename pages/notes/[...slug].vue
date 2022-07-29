@@ -50,7 +50,7 @@ useHead({
     >
       <div class="sticky md:top-[90px] hidden lg:block">
         <h2 class="font-bold text-base py-3">筆記內容</h2>
-        <div class="w-[300px] p-5 border rounded-md">
+        <div class="w-[300px] p-5 border rounded-md tocBox">
           <Toc :links="blog.body.toc.links" />
         </div>
 
@@ -91,6 +91,9 @@ h6 a {
   color: #6d28d9 !important;
   font-weight: bold !important;
 }
+.tocBox {
+  border-color: var(--border-color);
+}
 
 .blog-link {
   @apply prose-a:text-blue-600 no-underline;
@@ -106,7 +109,11 @@ h6 a {
   overflow-y: scroll;
 }
 
-.prose :where(blockquote):not(:where([class~="not-prose"] *)){
+.prose :where(blockquote):not(:where([class~='not-prose'] *)) {
+  color: var(--mode-text-color);
+}
+
+.prose :where(h1):not(:where([class~='not-prose'] *)) {
   color: var(--mode-text-color);
 }
 </style>

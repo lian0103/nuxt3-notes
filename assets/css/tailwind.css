@@ -12,16 +12,22 @@ body {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.8);
   --mode-text-color: rgba(0, 0, 0, 0.8);
+  --mode-text-color-hover: #6d28d9;
+  --border-color: #ccc;
 }
 .dark-mode body {
   background-color: #091a28;
   color: #ebf4f1;
   --mode-text-color: #ebf4f1;
+  --mode-text-color-hover: #6d28d9;
+  --border-color: #fff;
 }
 .sepia-mode body {
   background-color: #f1e7d0;
   color: #433422;
   --mode-text-color: #433422;
+  --mode-text-color-hover: #fff;
+  --border-color: #444;
 }
 
 .rainbow-text {
