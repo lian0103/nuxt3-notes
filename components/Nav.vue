@@ -42,12 +42,17 @@ const handleAppMode = () => {
 };
 
 const addModeClass = (mode = null) => {
+  if (mode) {
+    localStorage.setItem('nuxt3-app-color-mode', mode);
+  }
+
   document
     ?.getElementsByTagName('html')[0]
     ?.setAttribute('class', `${mode || appMode.value}-mode`);
 };
 
 onMounted(() => {
+  appMode.value = localStorage.getItem('nuxt3-app-color-mode') || 'light';
   addModeClass();
 });
 </script>
