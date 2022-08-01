@@ -4,13 +4,14 @@ import { Icon } from '@iconify/vue';
 
 <template>
   <div class="content-info">
-    <Icon class="w-12 h-12 mr-2" icon="carbon:warning-filled" />
+    <Icon class="w-6 h-6 mr-2" icon="carbon:warning-filled" />
     <slot />
   </div>
 </template>
 
 <style>
 .content-info {
-  @apply bg-red-200 flex justify-center items-center p-4 rounded-md;
+  @apply bg-red-200 flex justify-start items-center p-4 rounded-md;
+  color: rgba(0, 0, 0, 0.8);
 }
 </style>

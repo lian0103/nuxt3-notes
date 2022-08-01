@@ -8,21 +8,21 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
+body.light-mode {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.8);
   --mode-text-color: rgba(0, 0, 0, 0.8);
   --mode-text-color-hover: #6d28d9;
   --border-color: #ccc;
 }
-.dark-mode body {
+body.dark-mode {
   background-color: #091a28;
   color: #ebf4f1;
   --mode-text-color: #ebf4f1;
   --mode-text-color-hover: #6d28d9;
   --border-color: #fff;
 }
-.sepia-mode body {
+body.sepia-mode {
   background-color: #f1e7d0;
   color: #433422;
   --mode-text-color: #433422;

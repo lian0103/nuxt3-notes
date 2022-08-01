@@ -19,20 +19,26 @@ const modeIconMap = {
   sepia: 'bi:cloud-moon',
 };
 
-const appMode = useState('appMode', () => 'light');
+const colorEnum = {
+  DARK: 'dark',
+  LIGHT: 'light',
+  SEPIA: 'sepia',
+};
+
+const appMode = useState('appMode', () => null);
 
 const handleAppMode = () => {
   switch (appMode.value) {
-    case 'light': {
-      appMode.value = 'dark';
+    case colorEnum.LIGHT: {
+      appMode.value = colorEnum.DARK;
       break;
     }
-    case 'dark': {
-      appMode.value = 'sepia';
+    case colorEnum.DARK: {
+      appMode.value = colorEnum.SEPIA;
       break;
     }
-    case 'sepia': {
-      appMode.value = 'light';
+    case colorEnum.SEPIA: {
+      appMode.value = colorEnum.LIGHT;
       break;
     }
   }
@@ -47,12 +53,24 @@ const addModeClass = (mode = null) => {
   }
 
   document
-    ?.getElementsByTagName('html')[0]
+    ?.getElementsByTagName('body')[0]
     ?.setAttribute('class', `${mode || appMode.value}-mode`);
 };
 
 onMounted(() => {
-  appMode.value = localStorage.getItem('nuxt3-app-color-mode') || 'light';
+  let mode = colorEnum.LIGHT;
+  if (
+    window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+  ) {
+    mode = colorEnum.DARK;
+  }
+
+  if (localStorage.getItem('nuxt3-app-color-mode')) {
+    mode = localStorage.getItem('nuxt3-app-color-mode');
+  }
+
+  appMode.value = mode;
   addModeClass();
 });
 </script>
