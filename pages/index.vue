@@ -3,6 +3,18 @@ const { data: blogNav } = await useAsyncData('navigation', () => {
   return fetchContentNavigation(queryContent('blog'));
 });
 
+const { data } = await useAsyncData('pratices', () => {
+  return queryContent('pratices').find();
+});
+
+const dataComputed = computed(() => {
+  // console.log(data.value[0]);
+  if (data.value[0]?.body) {
+    return data.value[0].body;
+  }
+  return [];
+});
+
 useHead({
   title: 'Content Blog',
 });
@@ -17,11 +29,7 @@ useHead({
         Learn. Share. Grow.
       </h1>
 
-      <p
-        class="text-center uppercase font-medium tracking-wider mb-10 text-gray-500"
-      >
-        筆記分類
-      </p>
+      <h2 class="h2title">筆記分類</h2>
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-5">
         <div
           class="px-7 py-5 rounded-lg border-2 listBox"
@@ -48,12 +56,15 @@ useHead({
           </ul>
         </div>
       </div>
+
+      <h2 class="h2title">實作專案</h2>
+      <Timeline :data="dataComputed" />
     </section>
   </main>
 </template>
 
 <style>
-.listBox{
+.listBox {
   border-color: var(--border-color);
 }
 
@@ -89,5 +100,9 @@ useHead({
   ::-webkit-scrollbar-thumb:hover {
     background: #a0aec0;
   }
+}
+
+.h2title {
+  @apply py-6 text-lg font-bold flex items-center justify-center lg:justify-start w-full text-center;
 }
 </style>

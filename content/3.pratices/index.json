@@ -1,0 +1,72 @@
+{
+    "body": [
+        {
+            "time": "2022-04 ~ 2022-08",
+            "title": "後台元件庫",
+            "text": "團隊導入UI視覺規範設計，我負責專案架構與組件開發。",
+            "imgs": [],
+            "links": [
+                {
+                    "title": "展示範例:日期選擇元件",
+                    "url": "https://lian0103.github.io/vue-ui/#/gt/time-picker"
+                }
+            ]
+        },
+        {
+            "time": "2021-12 ~ 2022-04",
+            "title": "Ｑuasar Apps",
+            "text": "測試Quasar(VueJS library)，來實現記帳的應用，使用包含Quasar的Tab、Dialog、Form、和Dialog等組件。 並搭配Google Firebase平台API，實作權限註冊、儲存即時資料和專案佈署。",
+            "imgs": [],
+            "links": [
+                {
+                    "title": "花費紀錄",
+                    "url": "https://account-app-f70c0.web.app/#/"
+                },
+                {
+                    "title": "健康回報",
+                    "url": "https://gt-prevent-record.firebaseapp.com/#/"
+                },
+                {
+                    "title": "預約服務系統",
+                    "url": "https://book-service.firebaseapp.com/#/"
+                }
+            ]
+        },
+        {
+            "time": "2021-12 ~ 2022-04",
+            "title": "nodeJS 學習與實作",
+            "text": "不誤前端正業的學習內容",
+            "imgs": [],
+            "links": [
+                {
+                    "title": "實作socket io 的簡易聊天功能",
+                    "url": "http://jason-node-chatroom.herokuapp.com/"
+                },
+                {
+                    "title": "Node API",
+                    "url": "https://github.com/lian0103/NodeAPI"
+                },
+                {
+                    "title": "nodeJS & line-bot message API",
+                    "url": "https://github.com/lian0103/line-bot-dopee"
+                }
+            ]
+        },
+        {
+            "time": "2020-07 ~ 2020-08",
+            "title": "形象網頁",
+            "text": "在技術上使用React SPA，也使用jQuery達成SPA。",
+            "imgs": [],
+            "links": [
+                {
+                    "title": "React SPA",
+                    "url": "https://lian0103.github.io/runtai"
+                },
+                {
+                    "title": "jQuery SPA",
+                    "url": "https://lian0103.github.io/gulpWeb/#mainPage"
+                }
+            ]
+        }
+    ]
+}
