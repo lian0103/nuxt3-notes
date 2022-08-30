@@ -14,7 +14,7 @@
         },
         {
             "time": "2021-12 ~ 2022-04",
-            "title": "Ｑuasar Apps",
+            "title": "vue3 Quasar Apps",
             "text": "測試Quasar(VueJS library)，來實現記帳的應用，使用包含Quasar的Tab、Dialog、Form、和Dialog等組件。 並搭配Google Firebase平台API，實作權限註冊、儲存即時資料和專案佈署。",
             "imgs": [],
             "links": [
@@ -35,7 +35,7 @@
         {
             "time": "2021-12 ~ 2022-04",
             "title": "nodeJS 學習與實作",
-            "text": "不誤前端正業的學習內容",
+            "text": "nodejs學習..",
             "imgs": [],
             "links": [
                 {
