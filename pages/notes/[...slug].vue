@@ -100,6 +100,7 @@ h6 a {
 }
 .prose {
   color: var(--mode-text-color);
+  max-width: 90vw;
 }
 
 .prose :where(a):not(:where([class~='not-prose'] *)) {
@@ -109,12 +110,15 @@ h6 a {
 
 .prose-sm :where(pre):not(:where([class~='not-prose'] *)) {
   max-width: 90vw;
-  margin: auto;
+  margin-left: 0;
   overflow-y: scroll;
 }
 
 .prose :where(blockquote):not(:where([class~='not-prose'] *)) {
   color: var(--mode-text-color);
+  max-width: 90vw;
+  margin-left: 0;
+  overflow-y: scroll;
 }
 
 .prose :where(h1):not(:where([class~='not-prose'] *)) {
