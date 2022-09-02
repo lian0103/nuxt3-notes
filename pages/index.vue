@@ -1,16 +1,29 @@
 <script setup>
+import GanttChart from '~~/components/GanttChart.vue';
 const { data: blogNav } = await useAsyncData('navigation', () => {
   return fetchContentNavigation(queryContent('blog'));
 });
 
 const { data } = await useAsyncData('pratices', () => {
-  return queryContent('pratices').find();
+  return queryContent('pratices').find(); 
+});
+
+const { data:ganttData } = await useAsyncData('gantt', () => {
+  return queryContent('gantt').find(); 
 });
 
 const dataComputed = computed(() => {
-  // console.log(data.value[0]);
+  // console.log(data.value[0]?.body)
   if (data.value[0]?.body) {
     return data.value[0].body;
+  }
+  return [];
+});
+
+const ganttDataComputed = computed(() => {
+  // console.log(ganttData.value[0]?.body)
+  if (ganttData.value[0]?.body) {
+    return ganttData.value[0]?.body;
   }
   return [];
 });
@@ -22,7 +35,7 @@ useHead({
 
 <template>
   <main>
-    <section class="lg:px-[10%] px-[5%] lg:pt-20 pt-2">
+    <section class="lg:px-[10%] px-[5%] lg:pt-20 pt-2 mb-6 overflow-x-hidden">
       <h1
         class="lg:text-6xl text-4xl text-center leading-normal font-bold rainbow-text my-12"
       >
@@ -59,6 +72,9 @@ useHead({
 
       <h2 class="h2title">實作專案</h2>
       <Timeline :data="dataComputed" />
+
+      <h2 class="h2title">2022甘特圖</h2>
+      <GanttChart :data="ganttDataComputed" />
     </section>
   </main>
 </template>

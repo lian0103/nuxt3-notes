@@ -1,0 +1,67 @@
+{
+    "body": [
+        {
+          "task": "stage1",
+          "type": "SI",
+          "startTime": "2022-1-1",
+          "endTime": "2022-3-1",
+          "details": "遷移vue3"
+        },
+        {
+          "task": "stage2",
+          "type": "SI",
+          "startTime": "2022-3-1",
+          "endTime": "2022-4-1",
+          "details": "功能修正"
+        },
+        {
+          "task": "stage1",
+          "type": "GTUI",
+          "startTime": "2022-4-1",
+          "endTime": "2022-6-1",
+          "details": "程式架構與初版開發"
+        },
+        {
+          "task": "stage2",
+          "type": "GTUI",
+          "startTime": "2022-5-1",
+          "endTime": "2022-8-1",
+          "details": "內部溝通與修正"
+        },
+        {
+          "task": "stage3",
+          "type": "GTUI",
+          "startTime": "2022-9-1",
+          "endTime": "2022-10-1",
+          "details": "新需求開發"
+        },
+        {
+          "task": "stage1",
+          "type": "learning",
+          "startTime": "2022-3-1",
+          "endTime": "2022-4-1",
+          "details": "NodeJS技術學習"
+        },
+        {
+          "task": "Nuxt3",
+          "type": "learning",
+          "startTime": "2022-6-1",
+          "endTime": "2022-9-1",
+          "details": ""
+        },
+        {
+          "task": "crawler",
+          "type": "learning",
+          "startTime": "2022-8-1",
+          "endTime": "2022-9-1",
+          "details":"爬取momo資料並寫入google sheet"
+        },
+        {
+          "task": "思考...",
+          "type": "celebration",
+          "startTime": "2022-9-1",
+          "endTime": "2023-1-1",
+          "details": ""
+        }
+    ]
+}
