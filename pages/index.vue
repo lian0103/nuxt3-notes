@@ -5,11 +5,11 @@ const { data: blogNav } = await useAsyncData('navigation', () => {
 });
 
 const { data } = await useAsyncData('pratices', () => {
-  return queryContent('pratices').find(); 
+  return queryContent('pratices').find();
 });
 
-const { data:ganttData } = await useAsyncData('gantt', () => {
-  return queryContent('gantt').find(); 
+const { data: ganttData } = await useAsyncData('gantt', () => {
+  return queryContent('gantt').find();
 });
 
 const dataComputed = computed(() => {
@@ -27,6 +27,14 @@ const ganttDataComputed = computed(() => {
   }
   return [];
 });
+
+const ganttShow = ref(false);
+
+onMounted(()=>{
+  if(window.innerWidth > 600){ //手機瀏覽渲染會跑版 錯誤尚未找到
+    ganttShow.value = true
+  } 
+})
 
 useHead({
   title: 'Content Blog',
@@ -73,8 +81,12 @@ useHead({
       <h2 class="h2title">實作專案</h2>
       <Timeline :data="dataComputed" />
 
-      <h2 class="h2title">2022甘特圖</h2>
-      <GanttChart :data="ganttDataComputed" />
+      <template v-if="ganttShow">
+        <div>
+          <h2 class="h2title">2022甘特圖</h2>
+          <GanttChart :data="ganttDataComputed" />
+        </div>
+      </template>
     </section>
   </main>
 </template>

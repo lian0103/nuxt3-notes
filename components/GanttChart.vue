@@ -235,7 +235,7 @@ onMounted(() => {
         : parseInt(window.innerWidth) - 20
       : 600;
 
-  drawGanttChart(data, boxWidth);
+    drawGanttChart(data, boxWidth);
 });
 </script>
 
