@@ -30,11 +30,9 @@ const ganttDataComputed = computed(() => {
 
 const ganttShow = ref(false);
 
-onMounted(()=>{
-  if(window.innerWidth > 600){ //手機瀏覽渲染會跑版 錯誤尚未找到
-    ganttShow.value = true
-  } 
-})
+onMounted(() => {
+  ganttShow.value = true;
+});
 
 useHead({
   title: 'Content Blog',
@@ -81,12 +79,10 @@ useHead({
       <h2 class="h2title">實作專案</h2>
       <Timeline :data="dataComputed" />
 
-      <template v-if="ganttShow">
-        <div>
-          <h2 class="h2title">2022甘特圖</h2>
-          <GanttChart :data="ganttDataComputed" />
-        </div>
-      </template>
+      <div>
+        <h2 class="h2title">2022甘特圖</h2>
+        <GanttChart :data="ganttDataComputed" />
+      </div>
     </section>
   </main>
 </template>
