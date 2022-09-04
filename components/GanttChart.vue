@@ -16,10 +16,12 @@ function drawGanttChart(taskArray, boxWidth) {
     SI: '#859eff',
     GTUI: '#00b9fa',
     learning: '#e370dd',
+    nodeJS:'#e370dd',
     development: '#00b9fa',
     coding: '#859eff',
     promotion: '#e370dd',
     celebration: '#ff3c83',
+    other:'#ff3c83'
   };
   const categoryTitleXY = {};
   const categoryYstar = {};

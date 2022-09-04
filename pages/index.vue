@@ -35,7 +35,7 @@ onMounted(() => {
 });
 
 useHead({
-  title: 'Content Blog',
+  title: 'Jason Blog',
 });
 </script>
 
