@@ -5,7 +5,7 @@
           "type": "SI",
           "startTime": "2022-1-1",
           "endTime": "2022-3-1",
-          "details": "遷移vue3"
+          "details": "vue 2遷移vue 3"
         },
         {
           "task": "stage2",
@@ -37,29 +37,36 @@
         },
         {
           "task": "stage1",
-          "type": "learning",
+          "type": "nodeJS",
           "startTime": "2022-3-1",
           "endTime": "2022-4-1",
-          "details": "NodeJS技術學習"
+          "details": "基礎技術學習"
         },
         {
-          "task": "Nuxt3",
-          "type": "learning",
-          "startTime": "2022-6-1",
-          "endTime": "2022-9-1",
-          "details": ""
-        },
-        {
-          "task": "crawler",
-          "type": "learning",
+          "task": "stage2",
+          "type": "nodeJS",
           "startTime": "2022-8-1",
           "endTime": "2022-9-1",
           "details":"爬取momo資料並寫入google sheet"
         },
         {
+          "task": "Quasar",
+          "type": "other",
+          "startTime": "2021-12-1",
+          "endTime": "2022-1-1",
+          "details": "新套件庫學習與實作"
+        },
+        {
+          "task": "Nuxt3",
+          "type": "other",
+          "startTime": "2022-6-1",
+          "endTime": "2022-9-1",
+          "details": ""
+        },
+        {
           "task": "思考...",
-          "type": "celebration",
-          "startTime": "2022-9-1",
+          "type": "other",
+          "startTime": "2022-10-1",
           "endTime": "2023-1-1",
           "details": ""
         }

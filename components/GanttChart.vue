@@ -1,5 +1,6 @@
 <script setup>
 import * as d3 from 'd3';
+import daysjs from 'dayjs';
 
 const { data, boxWidth } = defineProps({
   data: { type: Array, default: null },
@@ -14,11 +15,13 @@ function drawGanttChart(taskArray, boxWidth) {
   const colorMap = {
     SI: '#859eff',
     GTUI: '#00b9fa',
-    learning:'#e370dd',
+    learning: '#e370dd',
+    nodeJS:'#e370dd',
     development: '#00b9fa',
     coding: '#859eff',
     promotion: '#e370dd',
     celebration: '#ff3c83',
+    other:'#ff3c83'
   };
   const categoryTitleXY = {};
   const categoryYstar = {};
@@ -48,8 +51,8 @@ function drawGanttChart(taskArray, boxWidth) {
   var series = taskArray.map((item, i) => ({
     ...item,
     idx: i,
-    start: new Date(item.startTime),
-    end: new Date(item.endTime),
+    start: daysjs(item.startTime),
+    end: daysjs(item.endTime),
   }));
 
   var xExtent = [
@@ -235,7 +238,7 @@ onMounted(() => {
         : parseInt(window.innerWidth) - 20
       : 600;
 
-    drawGanttChart(data, boxWidth);
+  drawGanttChart(data, boxWidth);
 });
 </script>
 
